@@ -10,6 +10,8 @@ ENV HASURA_GRAPHQL_DEV_MODE=true
 # https://devcenter.heroku.com/articles/heroku-postgres-plans#hobby-tier
 ENV HASURA_GRAPHQL_PG_CONNECTIONS=15
 
+ENV HASURA_GRAPHQL_ADMIN_SECRET=hitesh90
+
 CMD HASURA_GRAPHQL_METADATA_DATABASE_URL=$DATABASE_URL graphql-engine \
     serve \
     --server-port $PORT
